@@ -58,7 +58,7 @@ const App = () => {
 
     return (
         <>
-            <h1><a href="https://namu.wiki/w/%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC"></a></h1>
+            <h1><a href="https://namu.wiki/w/%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC">숫자야구란?</a></h1>
             <h1>{result}</h1>
             <form onSubmit={onSubmitForm}>
                 <input maxLength={4} value={value} onChange={onChangeInput} />
