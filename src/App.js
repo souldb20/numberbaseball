@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Try from './Try';
 
 const getNumbers = () => {
-    const candidate = [0,1,2,3,4,5,6,7,8,9];
+    // const candidate = [0,1,2,3,4,5,6,7,8,9];
     const array = [];
     for (let i = 0; i < 4; i += 1){
         const chosen = (Math.floor(Math.random() * (9 - i)));
@@ -61,7 +61,8 @@ const App = () => {
             <h1><a href="https://namu.wiki/w/%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC">숫자야구란?</a></h1>
             <h1>{result}</h1>
             <form onSubmit={onSubmitForm}>
-                <input maxLength={4} value={value} onChange={onChangeInput} />
+                <input type ="text" minLength={4} maxLength={4} value={value} onChange={onChangeInput} />
+                <button>입력!</button>
             </form>
             <div>시도: {tries.length}</div>
             <ul>
@@ -71,7 +72,7 @@ const App = () => {
                     );
                })}
             </ul>
-            <footer>@version: 0.1.2</footer>
+            <footer>@version: 0.2.0</footer>
         </>
     );
 }
